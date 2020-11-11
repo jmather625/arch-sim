@@ -126,10 +126,15 @@ class Command:
         self.operand1 = operand1
         self.operand2 = operand2
         self.operand3 = operand3
+        self.cmdn = -1
+
+
+    def set_cmdn(self, cmdn: int):
+        self.cmdn = cmdn
 
     
     def __repr__(self) -> str:
-        return f"Command({self.instr}, {self.operand1}, {self.operand2}, {self.operand3})"
+        return f"{self.cmdn}: Command({self.instr}, {self.operand1}, {self.operand2}, {self.operand3})"
 
 
 class ISA:
